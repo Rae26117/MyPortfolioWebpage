@@ -318,15 +318,21 @@ article.active {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+
+  border-radius: 50%; /* 改為50%使容器變成圓形 */
+  overflow: hidden; /* 確保內容不會溢出圓形邊界 */
+  border: 2px solid var(--blue-crayola);
+  box-shadow: 0 0 15px var(--blue-crayola); 
 }
+
 
 .info-content .name {
   color: var(--white2);
   font-size: var(--fs3);
   font-weight: var(--fw500);
   letter-spacing: -0.25px;
-  margin-bottom: 10px;
+  text-align: center;
+  /* margin-bottom: 10px; */
 }
 
 .info-content .title {
@@ -1097,15 +1103,13 @@ article.active {
   }
 
   .avatar-box {
-    border-radius: 30px;
+    border-radius: 58%;
   }
   .avatar-box img {
     width: 120px;
   }
 
-  .info-content .name {
-    margin-bottom: 15px;
-  }
+  
   .info-content .title {
     padding: 5px 10px;
   }
@@ -1599,10 +1603,6 @@ article.active {
     width: 150px;
   }
 
-  .info-content .name {
-    white-space: nowrap;
-    text-align: center;
-  }
 
   .info-content .title {
     margin: auto;
