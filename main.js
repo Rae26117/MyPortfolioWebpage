@@ -70,21 +70,28 @@ function generatePortfolioHTML() {
   const projectsHTML = portfolioData
     .map(
       (project) => `
-    <li class="project-item active" data-filter-item data-category="${
-      project.category
-    }" ${project.videoUrl ? `data-video-url="${project.videoUrl}"` : ""}>
-      <a href="#">
-        <figure class="project-img">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-          <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
-        </figure>
-        <h3 class="project-title">${project.title}</h3>
-        <p class="project-category">${project.category}</p>
-      </a>
-    </li>
-  `
+   <li class="project-item active" data-filter-item data-category="${
+     project.category
+   }" ${project.videoUrl ? `data-video-url="${project.videoUrl}"` : ""}>
+     <a href="#">
+       <figure class="project-img">
+         <div class="project-item-icon-box">
+           <ion-icon name="eye-outline"></ion-icon>
+         </div>
+         <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
+       </figure>
+       <h3 class="project-title">${project.title}</h3>
+       <p class="project-category">${project.category}</p>
+       <div class="project-tags">
+         ${
+           project.tags
+             ?.map((tag) => `<span class="project-tag">${tag}</span>`)
+             .join("") || ""
+         }
+       </div>
+     </a>
+   </li>
+ `
     )
     .join("");
 
@@ -182,7 +189,6 @@ function openPortfolioModal(item) {
   const modalContent = modal.querySelector(".modal-content");
   const projectItem = item.closest(".project-item");
 
-  // 從 portfolioData 中查找對應的專案數據
   const projectId = Array.from(
     document.querySelectorAll(".project-item")
   ).indexOf(projectItem);
@@ -196,6 +202,23 @@ function openPortfolioModal(item) {
   modalContent.querySelector(".modal-title").textContent = projectData.title;
   modalContent.querySelector(".modal-description").textContent =
     projectData.description;
+
+  // 添加標籤到模態框
+  const tagsHTML =
+    projectData.tags
+      ?.map((tag) => `<span class="modal-tag">${tag}</span>`)
+      .join("") || "";
+
+  // 在標題後面插入標籤容器
+  const modalTitle = modalContent.querySelector(".modal-title");
+  const existingTags = modalContent.querySelector(".modal-tags");
+  if (existingTags) {
+    existingTags.remove();
+  }
+  modalTitle.insertAdjacentHTML(
+    "afterend",
+    `<div class="modal-tags">${tagsHTML}</div>`
+  );
 
   const videoContainer = modalContent.querySelector(".video-container");
 
@@ -271,7 +294,75 @@ window.addEventListener("resize", function () {
   }
 });
 
-// Initialize when the page loads
+// Add this to your main.js file
+
+// Load resume data
+async function loadResumeData() {
+  try {
+    const response = await fetch("resume.json");
+    const data = await response.json();
+    generateResumeHTML(data);
+  } catch (error) {
+    console.error("Error loading resume data:", error);
+  }
+}
+
+// Generate HTML for resume sections
+function generateResumeHTML(data) {
+  // Generate Education HTML
+  const educationList = document.getElementById("education-list");
+  if (educationList) {
+    educationList.innerHTML = data.education
+      .map(
+        (item) => `
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">${item.title}</h4>
+        <span>${item.period}</span>
+        <p class="timeline-text">${item.description}</p>
+      </li>
+    `
+      )
+      .join("");
+  }
+
+  // Generate Experience HTML
+  const experienceList = document.getElementById("experience-list");
+  if (experienceList) {
+    experienceList.innerHTML = data.experience
+      .map(
+        (item) => `
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">${item.title}</h4>
+        <span>${item.period}</span>
+        <p class="timeline-text">${item.description}</p>
+      </li>
+    `
+      )
+      .join("");
+  }
+
+  // Generate Skills HTML
+  const skillsList = document.getElementById("skills-list");
+  if (skillsList) {
+    skillsList.innerHTML = data.skills
+      .map(
+        (skill) => `
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="${skill.icon}" alt="${skill.name}" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">${skill.name}</h4>
+        </div>
+      </li>
+    `
+      )
+      .join("");
+  }
+}
+
+// Add this to your DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", () => {
   loadPortfolioData();
+  loadResumeData(); // Add this line
 });

@@ -6,7 +6,8 @@
       "category": "web development",
       "imageUrl": "https://i.postimg.cc/qRHpHMyd/project-1.jpg",
       "videoUrl": "https://www.youtube.com/watch?v=jfKfPfyJRdk",
-      "description": "Finance 是一個網頁開發專案...\n這是一個 Web Development 專案，專注於金融相關功能的開發。"
+      "description": "Finance 是一個網頁開發專案...\n這是一個 Web Development 專案，專注於金融相關功能的開發。",
+      "tags": ["React", "Node.js", "MongoDB"]
     },
     {
       "id": 2,

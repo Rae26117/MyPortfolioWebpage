@@ -1658,3 +1658,41 @@ article.active {
 .modal-content::-webkit-scrollbar-thumb:hover {
   background: var(--orange-yellow-crayola);
 }
+/* 作品集標籤樣式 */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px;
+}
+
+.project-tag {
+  background: var(--eerie-black1);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs8);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--jet);
+  transition: var(--transition1);
+}
+
+.project-tag:hover {
+  background: var(--jet);
+}
+
+/* 模態框中的標籤樣式 */
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.modal-tag {
+  background: var(--eerie-black1);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs7);
+  padding: 6px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--jet);
+}
