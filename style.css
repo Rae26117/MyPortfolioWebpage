@@ -823,43 +823,6 @@ article.active {
 
 /*SKILLS*/
 
-.skills-title {
-  margin-bottom: 20px;
-}
-
-.skills-list {
-  padding: 20px;
-}
-
-.skills-item:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-.skill .title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
-}
-
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs7);
-  font-weight: var(--fw300);
-}
-
-.skills-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
-}
-
-.skills-progress-fill {
-  background: var(--text-gradient-blue);
-  height: 100%;
-  border-radius: inherit;
-}
 
 /*PORTFOLIO*/
 
@@ -1273,9 +1236,6 @@ article.active {
     left: -43px;
   }
 
-  .skills-item:not(:last-child) {
-    margin-bottom: 25px;
-  }
 
   .project-img,
   .blog-banner-box {
@@ -1391,7 +1351,7 @@ article.active {
   }
 
   .modal-thumbnail {
-    height: 600px;
+    height: 00px;
   }
 
   .testimonials-modal {
