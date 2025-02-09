@@ -663,7 +663,11 @@ article.active {
 }
 
 .modal-title {
-  margin-bottom: 4px;
+  color: var(--white1);
+  font-size: var(--fs4);
+  font-weight: var(--fw500);
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
 .modal-content time {
