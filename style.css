@@ -2,54 +2,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+  /* 主要背景漸層 */
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(240, 1%, 25%) 3%,
-    hsl(0, 0%, 19%) 97%
-  );
-  --bg-gradient-jet: linear-gradient(
-      to bottom right,
-      hsla(240, 1%, 18%, 0.251) 3%,
-      hsla(240, 2%, 11%, 0) 100%
-    ),
-    hsl(240, 2%, 13%);
-  --bg-gradient-yellow1: linear-gradient(
-    to bottom right,
-    hsl(45, 100%, 71%) 0%,
-    hsla(36, 100%, 69%, 0) 50%
-  );
-  --bg-gradient-yellow2: linear-gradient(
-      135deg,
-      hsla(45, 100%, 71%, 0.251) 0%,
-      hsla(35, 100%, 68%, 0) 59.86%
-    ),
-    hsl(240, 2%, 13%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(0, 0%, 25%) 0%,
-    hsla(0, 0%, 25%, 0) 50%
-  );
-  --text-gradient-yellow: linear-gradient(
-    to right,
-    hsl(45, 100%, 72%),
-    hsl(35, 100%, 68%)
+    hsl(215, 20%, 25%) 3%,
+    hsl(215, 20%, 20%) 97%
   );
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black1: hsl(240, 2%, 13%);
-  --eerie-black2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
+  /* 次要背景漸層 */
+  --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(215, 20%, 18%, 0.251) 3%,
+      hsla(215, 20%, 11%, 0) 100%
+    ),
+    hsl(215, 20%, 13%);
+
+  /* 強調色漸層 */
+  --bg-gradient-blue1: linear-gradient(
+    to bottom right,
+    hsl(210, 100%, 70%) 0%,
+    hsla(210, 100%, 65%, 0) 50%
+  );
+
+  --bg-gradient-blue2: linear-gradient(
+      135deg,
+      hsla(210, 100%, 70%, 0.251) 0%,
+      hsla(210, 100%, 65%, 0) 59.86%
+    ),
+    hsl(215, 20%, 13%);
+
+  /* 邊框漸層 */
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(215, 20%, 25%) 0%,
+    hsla(215, 20%, 25%, 0) 50%
+  );
+
+  /* 文字漸層 */
+  --text-gradient-blue: linear-gradient(
+    to right,
+    hsl(210, 100%, 70%),
+    hsl(210, 100%, 65%)
+  );
+
+  /* 純色 */
+  --jet: hsl(215, 20%, 22%);
+  --onyx: hsl(215, 20%, 17%);
+  --eerie-black1: hsl(215, 20%, 13%);
+  --eerie-black2: hsl(215, 20%, 12%);
+  --smoky-black: hsl(215, 20%, 7%);
   --white1: hsl(0, 0%, 100%);
   --white2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --blue-crayola: hsl(210, 100%, 70%);
+  --azure: hsl(210, 100%, 60%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  --ff-poppins: "Poppins", sans-serif;
+  /* 更新原有的orange-yellow-crayola變數為藍色 */
+  --orange-yellow-crayola: hsl(210, 100%, 70%);
+  --vegas-gold: hsl(210, 100%, 60%);
 
+  /* 保持其他變數不變 */
+  --ff-poppins: "Poppins", sans-serif;
   --fs1: 24px;
   --fs2: 18px;
   --fs3: 17px;
@@ -64,11 +79,12 @@
   --fw500: 500;
   --fw600: 600;
 
-  --shadow1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow2: 0px 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow3: 0px 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow4: 0px 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow5: 0px 24px 80px hsla(0, 0%, 0%, 0.25);
+  /* 調整陰影效果使其更柔和 */
+  --shadow1: -4px 8px 24px hsla(215, 20%, 0%, 0.2);
+  --shadow2: 0px 16px 30px hsla(215, 20%, 0%, 0.2);
+  --shadow3: 0px 16px 40px hsla(215, 20%, 0%, 0.2);
+  --shadow4: 0px 25px 50px hsla(215, 20%, 0%, 0.12);
+  --shadow5: 0px 24px 80px hsla(215, 20%, 0%, 0.2);
 
   --transition1: 0.25s ease;
   --transition2: 0.5s ease-in-out;
@@ -239,7 +255,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   border-radius: 3px;
 }
 
@@ -254,7 +270,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--blue-crayola);
   border-radius: 5px;
 }
 
@@ -349,11 +365,11 @@ article.active {
 
 .info-more-btn:hover,
 .info-more-btn:focus {
-  background: var(--bg-gradient-yellow1);
+  background: var(--bg-gradient-blue1);
 }
 .info-more-btn:hover::before,
 .info-more-btn:focus::before {
-  background: var(--bg-gradient-yellow2);
+  background: var(--bg-gradient-blue2);
 }
 
 .info-more-btn span {
@@ -458,7 +474,7 @@ article.active {
   color: var(--light-gray70);
 }
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  color: var(--blue-crayola);
 }
 
 /*ABOUT*/
@@ -600,6 +616,7 @@ article.active {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   opacity: 1;
+  background: var(--blue-crayola);
 }
 .modal-close-btn ion-icon {
   --ionicon-stroke-width: 50px;
@@ -747,7 +764,7 @@ article.active {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--azure);
   font-weight: var(--fw400);
   line-height: 1.6;
 }
@@ -777,7 +794,7 @@ article.active {
   height: 6px;
   width: 6px;
   border-radius: 50%;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   box-shadow: 0 0 0 4px var(--jet);
 }
 
@@ -829,7 +846,7 @@ article.active {
 }
 
 .skills-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   height: 100%;
   border-radius: inherit;
 }
@@ -1054,6 +1071,7 @@ article.active {
     height: 48px;
     border-radius: 12px;
     font-size: 18px;
+    color: var(--blue-crayola);
   }
 
   main {
@@ -1347,7 +1365,7 @@ article.active {
     color: var(--light-gray70);
   }
   .filter-item button.active {
-    color: var(--orange-yellow-crayola);
+    color: var(--blue-crayola);
   }
 
   .project-list,
@@ -1677,7 +1695,13 @@ article.active {
 }
 
 .project-tag:hover {
-  background: var(--jet);
+  background: var(--azure);
+  color: var(--white1);
+}
+
+.project-tag,
+.modal-tag {
+  color: var(--blue-crayola);
 }
 
 /* 模態框中的標籤樣式 */
