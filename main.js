@@ -343,16 +343,25 @@ function generateResumeHTML(data) {
 
   // Generate Skills HTML
   const skillsList = document.getElementById("skills-list");
-  if (skillsList) {
-    skillsList.innerHTML = data.skills
+  if (skillsList && data.skills) {
+    skillsList.innerHTML = Object.entries(data.skills)
       .map(
-        (skill) => `
-      <li class="service-item">
-        <div class="service-icon-box">
-          <img src="${skill.icon}" alt="${skill.name}" width="40">
-        </div>
-        <div class="service-content-box">
-          <h4 class="h4 service-item-title">${skill.name}</h4>
+        ([category, skills]) => `
+      <li class="skills-group">
+        <h3 class="h4 article-title">${category}</h3>
+        <div class="skills-wrapper">
+          ${skills
+            .map(
+              (skill) => `
+            <div class="skills-item">
+              <div class="skills-icon" title="${skill.title}">
+                <img src="${skill.icon}" alt="${skill.title}" width="40">
+              </div>
+              <p class="skills-name">${skill.name}</p>
+            </div>
+          `
+            )
+            .join("")}
         </div>
       </li>
     `

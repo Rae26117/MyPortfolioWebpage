@@ -3,12 +3,12 @@
     {
       "title": "國立臺北商業大學 數位多媒體設計系",
       "period": "2019 - 2024",
-      "description": "There I learnt a wide range of topics that are essential to understanding both the theory and practical aspects of computing. This involves programming fundamentals, computer architecture, operating systems, databases, software engineering, problem solving, collaboration and communication soft skills."
+      "description": "在北商大數位多媒體設計系的學習過程中，我接觸了遊戲與動畫相關的多元主題，涵蓋遊戲企劃、遊戲程式開發、3D建模與動畫製作的基礎設計與實作。此外，我也培養了問題解決能力，以及協作與溝通等關鍵軟技能。"
     },
     {
       "title": "國立馬公高級中學 資料處理科",
       "period": "2016 - 2019",
-      "description": "I chose my master degree in technology. There I deepened my knowledge, enhanced my skills in the area and learnt how to increase my career prospects in a competitive job market."
+      "description": "高中時，我選擇就讀資料處理科，這讓我對程式設計邏輯、電腦軟硬體、網頁設計，以及商業概論、經濟學、會計學等領域建立了基礎認知。"
     }
   ],
   "experience": [
@@ -26,24 +26,6 @@
       "title": "Web designer",
       "period": "2010 - 2013",
       "description": "I create logos, color schemes and typography for a brand's identity. Also I develop graphics for websites, social media and digital ads with applications that enhance user experience."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Web Design",
-      "icon": "https://i.postimg.cc/4389jZkP/icon-design.png"
-    },
-    {
-      "name": "Graphic Design",
-      "icon": "https://i.postimg.cc/ZqgqrqzG/icon-dev.png"
-    },
-    {
-      "name": "Branding",
-      "icon": "https://i.postimg.cc/xjLdzYxZ/icon-app.png"
-    },
-    {
-      "name": "WordPress",
-      "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png"
     }
   ],
   "what_im_doing": [
@@ -67,5 +49,87 @@
       "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
       "description": "I make high-quality photos of any category at a professional level."
     }
-  ]
+  ],
+  "skills": {
+    "Microsoft Office": [
+      {
+        "name": "Word",
+        "title": "Microsoft Word",
+        "icon": "https://i.postimg.cc/4389jZkP/icon-design.png",
+        "color": "bg-blue-500"
+      },
+      {
+        "name": "Excel",
+        "title": "Microsoft Excel",
+        "icon": "https://i.postimg.cc/ZqgqrqzG/icon-dev.png",
+        "color": "bg-green-500"
+      },
+      {
+        "name": "PPT",
+        "title": "Microsoft PowerPoint",
+        "icon": "https://i.postimg.cc/xjLdzYxZ/icon-app.png",
+        "color": "bg-orange-500"
+      }
+    ],
+    "Adobe 系列": [
+      {
+        "name": "Ps",
+        "title": "Adobe Photoshop",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-cyan-500"
+      },
+      {
+        "name": "Ai",
+        "title": "Adobe Illustrator",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-orange-500"
+      },
+      {
+        "name": "Pr",
+        "title": "Adobe Premiere Pro",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-purple-500"
+      },
+      {
+        "name": "Ae",
+        "title": "Adobe After Effects",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-indigo-500"
+      }
+    ],
+    "3D 建模": [
+      {
+        "name": "Blender",
+        "title": "Blender",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-orange-500"
+      },
+      {
+        "name": "Maya",
+        "title": "Autodesk Maya",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-blue-500"
+      },
+      {
+        "name": "MD",
+        "title": "Marvelous Designer",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-purple-500"
+      }
+    ],
+    "遊戲引擎": [
+      {
+        "name": "Unity",
+        "title": "Unity",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-gray-500"
+      },
+      {
+        "name": "Unreal",
+        "title": "Unreal Engine",
+        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "color": "bg-blue-500"
+      }
+    ]
+  }
 }

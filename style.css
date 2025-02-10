@@ -322,9 +322,8 @@ article.active {
   border-radius: 50%; /* 改為50%使容器變成圓形 */
   overflow: hidden; /* 確保內容不會溢出圓形邊界 */
   border: 2px solid var(--blue-crayola);
-  box-shadow: 0 0 15px var(--blue-crayola); 
+  box-shadow: 0 0 15px var(--blue-crayola);
 }
-
 
 .info-content .name {
   color: var(--white2);
@@ -822,7 +821,73 @@ article.active {
 }
 
 /*SKILLS*/
+/* 技能展示樣式 */
+.skills-group {
+  margin-bottom: 40px;
+}
 
+.skills-group .article-title {
+  margin-bottom: 20px;
+  color: var(--white2);
+  font-size: var(--fs4);
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.skills-group .article-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--text-gradient-blue);
+  border-radius: 3px;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px 20px 0;  /* 上方增加間距 */
+  margin-top: 50px;      /* 額外的上方間距 */
+}
+
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--jet);
+  transition: transform 0.25s;
+  overflow: hidden;  /* 防止圖片溢出容器 */
+}
+
+.skills-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;  /* 保持圖片比例 */
+  display: block;
+}
+
+.skills-icon:hover {
+  transform: scale(1.1);
+}
+
+.skills-name {
+  color: var(--light-gray);
+  font-size: var(--fs7);
+  text-align: center;
+}
 
 /*PORTFOLIO*/
 
@@ -1072,7 +1137,6 @@ article.active {
     width: 120px;
   }
 
-  
   .info-content .title {
     padding: 5px 10px;
   }
@@ -1236,7 +1300,6 @@ article.active {
     left: -43px;
   }
 
-
   .project-img,
   .blog-banner-box {
     border-radius: 16px;
@@ -1376,6 +1439,21 @@ article.active {
       margin-right: auto;
     }
   }
+
+  .skills-wrapper {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skills-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .skills-icon img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1496,6 +1574,10 @@ article.active {
   .video-container {
     width: 80%;
   }
+
+  .skills-wrapper {
+    padding: 0 30px;
+  }
 }
 
 @media (min-width: 1250px) {
@@ -1562,7 +1644,6 @@ article.active {
   .avatar-box img {
     width: 150px;
   }
-
 
   .info-content .title {
     margin: auto;
