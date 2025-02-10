@@ -1,19 +1,14 @@
 {
   "education": [
     {
-      "title": "University school of the arts",
-      "period": "2008 - 2010",
+      "title": "國立臺北商業大學 數位多媒體設計系",
+      "period": "2019 - 2024",
       "description": "There I learnt a wide range of topics that are essential to understanding both the theory and practical aspects of computing. This involves programming fundamentals, computer architecture, operating systems, databases, software engineering, problem solving, collaboration and communication soft skills."
     },
     {
-      "title": "New York Academy of Art",
-      "period": "2006 - 2007",
+      "title": "國立馬公高級中學 資料處理科",
+      "period": "2016 - 2019",
       "description": "I chose my master degree in technology. There I deepened my knowledge, enhanced my skills in the area and learnt how to increase my career prospects in a competitive job market."
-    },
-    {
-      "title": "High School of Art and Design",
-      "period": "2003 - 2005",
-      "description": "There I learnt foundational courses and computer sciences fundamentals. In the institution, I chose my specialization in web-development that involves front-end and back-end technologies, user interface designs and content management systems."
     }
   ],
   "experience": [
@@ -49,6 +44,28 @@
     {
       "name": "WordPress",
       "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png"
+    }
+  ],
+  "what_im_doing": [
+    {
+      "title": "Web Design",
+      "icon": "https://i.postimg.cc/4389jZkP/icon-design.png",
+      "description": "The most modern and high-quality design made at a professional level."
+    },
+    {
+      "title": "Web Development",
+      "icon": "https://i.postimg.cc/ZqgqrqzG/icon-dev.png",
+      "description": "High-quality development of sites at the professional level."
+    },
+    {
+      "title": "Mobile Apps",
+      "icon": "https://i.postimg.cc/xjLdzYxZ/icon-app.png",
+      "description": "Professional development of applications for iOS and Android."
+    },
+    {
+      "title": "Photography",
+      "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+      "description": "I make high-quality photos of any category at a professional level."
     }
   ]
 }

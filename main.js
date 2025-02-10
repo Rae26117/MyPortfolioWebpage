@@ -294,14 +294,13 @@ window.addEventListener("resize", function () {
   }
 });
 
-// Add this to your main.js file
-
 // Load resume data
 async function loadResumeData() {
   try {
     const response = await fetch("resume.json");
     const data = await response.json();
     generateResumeHTML(data);
+    generateWhatImDoingHTML(data.what_im_doing); // 新增這行
   } catch (error) {
     console.error("Error loading resume data:", error);
   }
@@ -361,8 +360,32 @@ function generateResumeHTML(data) {
   }
 }
 
-// Add this to your DOMContentLoaded event listener
+// Generate HTML for What I'm Doing section
+function generateWhatImDoingHTML(whatImDoingData) {
+  const serviceList = document.querySelector(".about .service-list");
+  if (serviceList) {
+    serviceList.innerHTML = whatImDoingData
+      .map(
+        (item) => `
+        <li class="service-item">
+          <div class="service-icon-box">
+            <img src="${item.icon}" alt="${item.title}" width="40" />
+          </div>
+          <div class="service-content-box">
+            <h4 class="h4 service-item-title">${item.title}</h4>
+            <p class="service-item-text">
+              ${item.description}
+            </p>
+          </div>
+        </li>
+      `
+      )
+      .join("");
+  }
+}
+
+// Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   loadPortfolioData();
-  loadResumeData(); // Add this line
+  loadResumeData();
 });
