@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Finance",
-      "category": "web development",
+      "categories": ["web development", "web design"],
       "imageUrl": "https://i.postimg.cc/qRHpHMyd/project-1.jpg",
       "videoUrl": "https://www.youtube.com/watch?v=jfKfPfyJRdk",
       "description": "Finance 是一個網頁開發專案...\n這是一個 Web Development 專案，專注於金融相關功能的開發。",
@@ -12,56 +12,56 @@
     {
       "id": 2,
       "title": "Orizon",
-      "category": "web development",
+      "categories": ["web development"],
       "imageUrl": "https://i.postimg.cc/bNrcM2Wt/project-2.png",
       "description": "Orizon 是一個創新的網頁開發專案...\n這是一個 Web Development 專案。"
     },
     {
       "id": 3,
       "title": "Fundo",
-      "category": "web design",
+      "categories": ["web design"],
       "imageUrl": "https://i.postimg.cc/jSJVqYsq/project-3.jpg",
       "description": "Fundo 是一個網頁設計專案...\n這是一個 Web Design 專案。"
     },
     {
       "id": 4,
       "title": "Brawlhalla",
-      "category": "applications",
+      "categories": ["applications", "web development"],
       "imageUrl": "https://i.postimg.cc/dtpXxNGb/project-4.png",
       "description": "Brawlhalla 是一個應用程式專案...\n這是一個 Applications 專案。"
     },
     {
       "id": 5,
       "title": "DSM.",
-      "category": "web design",
+      "categories": ["web design"],
       "imageUrl": "https://i.postimg.cc/43T0JKLw/project-5.png",
       "description": "DSM 是一個網頁設計專案...\n這是一個 Web Design 專案。"
     },
     {
       "id": 6,
       "title": "Metaspark",
-      "category": "web design",
+      "categories": ["web design"],
       "imageUrl": "https://i.postimg.cc/qR1DX1kZ/project-6.png",
       "description": "Metaspark 是一個網頁設計專案...\n這是一個 Web Design 專案。"
     },
     {
       "id": 7,
       "title": "Summary",
-      "category": "web development",
+      "categories": ["web development", "applications"],
       "imageUrl": "https://i.postimg.cc/Kj4q9tjc/project-7.png",
       "description": "Summary 是一個網頁開發專案...\n這是一個 Web Development 專案。"
     },
     {
       "id": 8,
       "title": "Task Manager",
-      "category": "applications",
+      "categories": ["applications"],
       "imageUrl": "https://i.postimg.cc/rw2j4B1w/project-8.jpg",
       "description": "Task Manager 是一個應用程式專案...\n這是一個 Applications 專案。"
     },
     {
       "id": 9,
       "title": "Arrival",
-      "category": "web development",
+      "categories": ["web development"],
       "imageUrl": "https://i.postimg.cc/7LxNsSQv/project-9.png",
       "description": "Arrival 是一個網頁開發專案...\n這是一個 Web Development 專案。"
     }

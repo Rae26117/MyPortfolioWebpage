@@ -37,7 +37,7 @@ function generatePortfolioHTML() {
   // 獲取所有唯一的分類
   const categories = [
     "all",
-    ...new Set(portfolioData.map((project) => project.category)),
+    ...new Set(portfolioData.flatMap((project) => project.categories)),
   ];
 
   // 生成篩選按鈕
@@ -66,13 +66,13 @@ function generatePortfolioHTML() {
     )
     .join("");
 
-  // 生成專案列表
+  // 生成專案列表，現在使用 data-categories 來存儲多個分類
   const projectsHTML = portfolioData
     .map(
       (project) => `
-   <li class="project-item active" data-filter-item data-category="${
-     project.category
-   }" ${project.videoUrl ? `data-video-url="${project.videoUrl}"` : ""}>
+   <li class="project-item active" data-filter-item data-categories='${JSON.stringify(
+     project.categories
+   )}'>
      <a href="#">
        <figure class="project-img">
          <div class="project-item-icon-box">
@@ -81,7 +81,7 @@ function generatePortfolioHTML() {
          <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
        </figure>
        <h3 class="project-title">${project.title}</h3>
-       <p class="project-category">${project.category}</p>
+       <p class="project-category">${project.categories.join(" & ")}</p>
        <div class="project-tags">
          ${
            project.tags
@@ -149,14 +149,15 @@ function initializePortfolioEvents() {
   });
 }
 
-// Filter functionality
+// 修改過濾功能
 function filterFunc(selectedValue) {
   const filterItems = document.querySelectorAll("[data-filter-item]");
 
   filterItems.forEach((item) => {
+    const categories = JSON.parse(item.dataset.categories);
     if (selectedValue === "all") {
       item.classList.add("active");
-    } else if (selectedValue === item.dataset.category) {
+    } else if (categories.includes(selectedValue)) {
       item.classList.add("active");
     } else {
       item.classList.remove("active");
