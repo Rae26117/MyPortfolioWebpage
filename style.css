@@ -822,6 +822,12 @@ article.active {
 
 /*SKILLS*/
 /* 技能展示樣式 */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 兩列布局 */
+  gap: 20px;  /* 區塊之間的間距 */
+}
+
 .skills-group {
   margin-bottom: 40px;
 }

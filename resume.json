@@ -51,23 +51,23 @@
     }
   ],
   "skills": {
-    "Microsoft Office": [
+    "Microsoft Office 系列": [
       {
         "name": "Word",
         "title": "Microsoft Word",
-        "icon": "https://i.postimg.cc/4389jZkP/icon-design.png",
+        "icon": "./img/M_Word.png",
         "color": "bg-blue-500"
       },
       {
         "name": "Excel",
         "title": "Microsoft Excel",
-        "icon": "https://i.postimg.cc/ZqgqrqzG/icon-dev.png",
+        "icon": "./img/M_Excel.png",
         "color": "bg-green-500"
       },
       {
         "name": "PPT",
         "title": "Microsoft PowerPoint",
-        "icon": "https://i.postimg.cc/xjLdzYxZ/icon-app.png",
+        "icon": "./img/M_PPT.png",
         "color": "bg-orange-500"
       }
     ],
@@ -75,25 +75,25 @@
       {
         "name": "Ps",
         "title": "Adobe Photoshop",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/A_Ps.png",
         "color": "bg-cyan-500"
       },
       {
         "name": "Ai",
         "title": "Adobe Illustrator",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/A_Ai.png",
         "color": "bg-orange-500"
       },
       {
         "name": "Pr",
         "title": "Adobe Premiere Pro",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/A_Pr.png",
         "color": "bg-purple-500"
       },
       {
         "name": "Ae",
         "title": "Adobe After Effects",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/A_Ae.png",
         "color": "bg-indigo-500"
       }
     ],
@@ -101,19 +101,19 @@
       {
         "name": "Blender",
         "title": "Blender",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/Blender.png",
         "color": "bg-orange-500"
       },
       {
         "name": "Maya",
         "title": "Autodesk Maya",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/maya.png",
         "color": "bg-blue-500"
       },
       {
         "name": "MD",
         "title": "Marvelous Designer",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/MD.png",
         "color": "bg-purple-500"
       }
     ],
@@ -121,13 +121,13 @@
       {
         "name": "Unity",
         "title": "Unity",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/Unity.png",
         "color": "bg-gray-500"
       },
       {
         "name": "Unreal",
         "title": "Unreal Engine",
-        "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
+        "icon": "./img/UE.png",
         "color": "bg-blue-500"
       }
     ]
