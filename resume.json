@@ -1,6 +1,11 @@
 {
   "education": [
     {
+      "title": "緯育TibaMe 資安與雲端架構工程師養成班  ( 147期 )",
+      "period": "2025",
+      "description": "學習 AWS 雲端服務操作、虛擬化環境建置、Linux 與ShellScript、自動化部署與網路設定等技術。"
+    },
+    {
       "title": "國立臺北商業大學 數位多媒體設計系",
       "period": "2019 - 2024",
       "description": "在北商大數位多媒體設計系的學習過程中，我接觸了遊戲與動畫相關的多元主題，涵蓋遊戲企劃、遊戲程式開發、3D建模與動畫製作的基礎設計與實作。此外，我也培養了問題解決能力，以及協作與溝通等關鍵軟技能。"
@@ -51,84 +56,240 @@
     }
   ],
   "skills": {
-    "Microsoft Office 系列": [
+    "雲端與系統服務": [
       {
-        "name": "Word",
-        "title": "Microsoft Word",
-        "icon": "./img/M_Word.png",
-        "color": "bg-blue-500"
+        "name": "AWS Organizations",
+        "title": "AWS Organizations",
+        "icon": "cloud-outline",
+        "color": "bg-yellow-400"
       },
       {
-        "name": "Excel",
-        "title": "Microsoft Excel",
-        "icon": "./img/M_Excel.png",
+        "name": "Systems Manager",
+        "title": "AWS Systems Manager",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "AWS EC2",
+        "title": "AWS EC2",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "AWS VPC",
+        "title": "AWS VPC",
+        "color": "bg-yellow-400"
+      },
+
+      {
+        "name": "IAM",
+        "title": "AWS IAM / Identity Center",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "S3",
+        "title": "Amazon S3",
+        "color": "bg-yellow-400"
+      },
+
+      {
+        "name": "Cloud Watch",
+        "title": "Amazon CloudWatch",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "App Runner",
+        "title": "AWS App Runner",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "ECR",
+        "title": "Amazon Elastic Container Registry",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "RDS",
+        "title": "Amazon RDS",
+        "color": "bg-yellow-400"
+      },
+      {
+        "name": "AWS Bedrock",
+        "title": "Amazon Bedrock",
+        "color": "bg-yellow-400"
+      }
+    ],
+
+    "程式與資料應用": [
+      {
+        "name": "Python",
+        "title": "Python 程式語言",
+        "icon": "code-slash-outline",
+        "color": "bg-yellow-500"
+      },
+      {
+        "name": "C#",
+        "title": "C# / Unity 開發",
+        "color": "bg-purple-500"
+      },
+      {
+        "name": "Blueprint",
+        "title": "UE5 Blueprint",
+        "color": "bg-blue-700"
+      },
+      {
+        "name": "FastAPI",
+        "title": "Python FastAPI",
         "color": "bg-green-500"
       },
       {
-        "name": "PPT",
-        "title": "Microsoft PowerPoint",
-        "icon": "./img/M_PPT.png",
-        "color": "bg-orange-500"
-      }
-    ],
-    "Adobe 系列": [
-      {
-        "name": "Ps",
-        "title": "Adobe Photoshop",
-        "icon": "./img/A_Ps.png",
-        "color": "bg-cyan-500"
+        "name": "Node.js",
+        "title": "Node.js",
+        "color": "bg-green-600"
       },
       {
-        "name": "Ai",
-        "title": "Adobe Illustrator",
-        "icon": "./img/A_Ai.png",
-        "color": "bg-orange-500"
+        "name": "Firebase",
+        "title": "Google Firebase",
+        "color": "bg-yellow-400"
       },
       {
-        "name": "Pr",
-        "title": "Adobe Premiere Pro",
-        "icon": "./img/A_Pr.png",
-        "color": "bg-purple-500"
+        "name": "MySQL",
+        "title": "MySQL 資料庫",
+        "color": "bg-blue-400"
       },
       {
-        "name": "Ae",
-        "title": "Adobe After Effects",
-        "icon": "./img/A_Ae.png",
-        "color": "bg-indigo-500"
-      }
-    ],
-    "3D 建模": [
+        "name": "API 串接",
+        "title": "RESTful API Integration",
+        "color": "bg-indigo-600"
+      },
       {
-        "name": "Blender",
-        "title": "Blender",
-        "icon": "./img/Blender.png",
+        "name": "HTML",
+        "title": "HTML5",
         "color": "bg-orange-500"
       },
       {
-        "name": "Maya",
-        "title": "Autodesk Maya",
-        "icon": "./img/maya.png",
+        "name": "CSS",
+        "title": "CSS3",
         "color": "bg-blue-500"
       },
       {
-        "name": "MD",
-        "title": "Marvelous Designer",
-        "icon": "./img/MD.png",
-        "color": "bg-purple-500"
+        "name": "JavaScript",
+        "title": "JavaScript",
+        "color": "bg-yellow-300"
       }
     ],
-    "遊戲引擎": [
+    "虛擬化與作業系統": [
       {
-        "name": "Unity",
-        "title": "Unity",
-        "icon": "./img/Unity.png",
+        "name": "Linux",
+        "title": "Linux",
+        "icon": "desktop-outline",
+        "color": "bg-gray-600"
+      },
+      {
+        "name": "MacOS",
+        "title": "MacOS",
         "color": "bg-gray-500"
       },
       {
-        "name": "Unreal",
-        "title": "Unreal Engine",
-        "icon": "./img/UE.png",
+        "name": "VMware ESXi",
+        "title": "VMware ESXi",
+        "icon": "./img/vmware.png",
         "color": "bg-blue-500"
+      },
+      {
+        "name": "vSphere",
+        "title": "vSphere",
+        "color": "bg-blue-500"
+      },
+      {
+        "name": "Windows Server",
+        "title": "Windows Server",
+        "color": "bg-blue-400"
+      }
+    ],
+
+    "自動化與部署": [
+      {
+        "name": "AWS CodePipeline",
+        "title": "AWS CodePipeline (DevOps)",
+        "icon": "construct-outline",
+        "color": "bg-teal-500"
+      },
+      {
+        "name": "Git",
+        "title": "Git 版本控制",
+        "color": "bg-red-500"
+      },
+      {
+        "name": "GitHub",
+        "title": "GitHub",
+        "color": "bg-gray-800"
+      },
+      {
+        "name": "ShellScript",
+        "title": "Linux Shell Script",
+        "color": "bg-green-600"
+      },
+      {
+        "name": "Docker",
+        "title": "Docker 容器化",
+        "color": "bg-blue-500"
+      }
+    ],
+
+    "網路設定與模擬": [
+      {
+        "name": "Cisco Packet Tracer",
+        "title": "Cisco Packet Tracer 模擬",
+        "icon": "git-network-outline",
+        "color": "bg-blue-700"
+      },
+      {
+        "name": "VLAN",
+        "title": "VLAN 設定",
+        "color": "bg-indigo-600"
+      },
+      {
+        "name": "Trunk",
+        "title": "VLAN Trunking",
+        "color": "bg-indigo-600"
+      },
+      {
+        "name": "Routing",
+        "title": "靜態/動態路由",
+        "color": "bg-indigo-600"
+      },
+      {
+        "name": "NAT",
+        "title": "NAT 網址轉換",
+        "icon": "./img/network.png",
+        "color": "bg-indigo-600"
+      }
+    ],
+
+    "教學與展示": [
+      {
+        "name": "Unity",
+        "title": "Unity 互動開發",
+        "icon": "school-outline",
+        "color": "bg-gray-500"
+      },
+      {
+        "name": "Unreal Engine",
+        "title": "Unreal Engine 展示設計",
+        "color": "bg-blue-500"
+      },
+      {
+        "name": "3D 建模與綁定",
+        "title": "3D Modeling & Rigging",
+        "color": "bg-orange-500"
+      },
+      {
+        "name": "教材設計",
+        "title": "教材腳本與互動設計",
+        "color": "bg-pink-400"
+      },
+      {
+        "name": "展演規劃與開發",
+        "title": "策展與沉浸式內容製作",
+        "color": "bg-purple-400"
       }
     ]
   }

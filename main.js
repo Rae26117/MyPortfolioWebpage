@@ -342,30 +342,57 @@ function generateResumeHTML(data) {
   }
 
   // Generate Skills HTML
+  // const skillsList = document.getElementById("skills-list");
+  // if (skillsList && data.skills) {
+  //   skillsList.innerHTML = Object.entries(data.skills)
+  //     .map(
+  //       ([category, skills]) => `
+  //     <li class="skills-group">
+  //       <h3 class="h4 article-title">${category}</h3>
+  //       <div class="skills-wrapper">
+  //         ${skills
+  //           .map(
+  //             (skill) => `
+  //           <div class="skills-item">
+  //             <div class="skills-icon" title="${skill.title}">
+  //               <img src="${skill.icon}" alt="${skill.title}" width="40">
+  //             </div>
+  //             <p class="skills-name">${skill.name}</p>
+  //           </div>
+  //         `
+  //           )
+  //           .join("")}
+  //       </div>
+  //     </li>
+  //   `
+  //     )
+  //     .join("");
+  // }
+
+  // Generate Skills HTML (List version without icons)
   const skillsList = document.getElementById("skills-list");
   if (skillsList && data.skills) {
     skillsList.innerHTML = Object.entries(data.skills)
-      .map(
-        ([category, skills]) => `
+      .map(([category, skills]) => {
+        const iconUrl = skills[0]?.icon || "";
+        return `
       <li class="skills-group">
-        <h3 class="h4 article-title">${category}</h3>
-        <div class="skills-wrapper">
+        <h3 class="h4 article-title">
+          ${
+            iconUrl
+              ? `<ion-icon name="${iconUrl}" class="skills-title-icon"></ion-icon>`
+              : ""
+          }
+          ${category}
+        </h3>
+        <ul class="skills-text-list">
           ${skills
-            .map(
-              (skill) => `
-            <div class="skills-item">
-              <div class="skills-icon" title="${skill.title}">
-                <img src="${skill.icon}" alt="${skill.title}" width="40">
-              </div>
-              <p class="skills-name">${skill.name}</p>
-            </div>
-          `
-            )
+            .map((skill) => `<li class="skills-text-item">${skill.name}</li>`)
             .join("")}
-        </div>
+        </ul>
       </li>
-    `
-      )
+    `;
+      })
       .join("");
   }
 }

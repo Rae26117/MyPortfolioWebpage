@@ -824,8 +824,8 @@ article.active {
 /* 技能展示樣式 */
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 兩列布局 */
-  gap: 20px;  /* 區塊之間的間距 */
+  grid-template-columns: repeat(2, 1fr); /* 兩列布局 */
+  gap: 20px; /* 區塊之間的間距 */
 }
 
 .skills-group {
@@ -855,8 +855,8 @@ article.active {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  padding: 20px 20px 0;  /* 上方增加間距 */
-  margin-top: 50px;      /* 額外的上方間距 */
+  padding: 20px 20px 0; /* 上方增加間距 */
+  margin-top: 50px; /* 額外的上方間距 */
 }
 
 .skills-item {
@@ -875,13 +875,13 @@ article.active {
   border-radius: 50%;
   background: var(--jet);
   transition: transform 0.25s;
-  overflow: hidden;  /* 防止圖片溢出容器 */
+  overflow: hidden; /* 防止圖片溢出容器 */
 }
 
 .skills-icon img {
   width: 40px;
   height: 40px;
-  object-fit: contain;  /* 保持圖片比例 */
+  object-fit: contain; /* 保持圖片比例 */
   display: block;
 }
 
@@ -894,6 +894,41 @@ article.active {
   font-size: var(--fs7);
   text-align: center;
 }
+
+.skills-text-list {
+  list-style-type: disc; /* 顯示圓點 */
+  padding-left: 5rem; /* 縮排，讓圓點與文字不貼齊 */
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-text-list li {
+  list-style: disc !important;
+}
+
+.skills-text-item {
+  margin-bottom: 0.25em;
+  font-size: 1rem;
+  color: #eeeeee;
+}
+
+.skills-title-icon {
+  font-size: 20px;
+  color: white;
+  background-color: #283553;
+  border-radius: 20%;
+  padding: 6px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* 讓 icon 與標題文字在同一行 */
+.skills-group > h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 
 /*PORTFOLIO*/
 
@@ -1450,12 +1485,12 @@ article.active {
     justify-content: center;
     gap: 20px;
   }
-  
+
   .skills-icon {
     width: 50px;
     height: 50px;
   }
-  
+
   .skills-icon img {
     width: 30px;
     height: 30px;
