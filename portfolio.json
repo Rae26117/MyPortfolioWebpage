@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "title": "AI 維運助手",
+      "imageUrl": "https://i.postimg.cc/qRHpHMyd/project-1.jpg",
+      "categories": ["ai", "cloud"],
+      "tags": ["FastAPI", "Bedrock", "CloudWatch"],
+      "description": "AI 維運助手專案，整合自然語言與 AWS API 操作",
+      "markdown": "markdown/ai-assistant.md"
+    },
+    {
       "id": 1,
       "title": "Finance",
       "categories": ["web development", "web design"],

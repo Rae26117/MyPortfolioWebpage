@@ -1,4 +1,14 @@
-"use strict";
+async function loadMarkdown(url) {
+  try {
+    const response = await fetch(url);
+    const text = await response.text();
+    return marked.parse(text);
+  } catch (err) {
+    return "<p>⚠️ 無法載入內容。</p>";
+  }
+}
+
+("use strict");
 
 // Opening or closing side bar
 const elementToggleFunc = function (elem) {
@@ -29,18 +39,16 @@ async function loadPortfolioData() {
 }
 
 // 生成作品集 HTML
-function generatePortfolioHTML() {
+async function generatePortfolioHTML() {
   const projectList = document.querySelector(".project-list");
   const filterList = document.querySelector(".filter-list");
   const selectList = document.querySelector(".select-list");
 
-  // 獲取所有唯一的分類
   const categories = [
     "all",
     ...new Set(portfolioData.flatMap((project) => project.categories)),
   ];
 
-  // 生成篩選按鈕
   const filterHTML = categories
     .map(
       (category) => `
@@ -53,7 +61,6 @@ function generatePortfolioHTML() {
     )
     .join("");
 
-  // 生成下拉選單選項
   const selectHTML = categories
     .map(
       (category) => `
@@ -66,41 +73,44 @@ function generatePortfolioHTML() {
     )
     .join("");
 
-  // 生成專案列表，現在使用 data-categories 來存儲多個分類
-  const projectsHTML = portfolioData
-    .map(
-      (project) => `
-   <li class="project-item active" data-filter-item data-categories='${JSON.stringify(
-     project.categories
-   )}'>
-     <a href="#">
-       <figure class="project-img">
-         <div class="project-item-icon-box">
-           <ion-icon name="eye-outline"></ion-icon>
-         </div>
-         <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
-       </figure>
-       <h3 class="project-title">${project.title}</h3>
-       <p class="project-category">${project.categories.join(" & ")}</p>
-       <div class="project-tags">
-         ${
-           project.tags
-             ?.map((tag) => `<span class="project-tag">${tag}</span>`)
-             .join("") || ""
-         }
-       </div>
-     </a>
-   </li>
- `
-    )
-    .join("");
+  let projectsHTML = "";
 
-  // 更新 DOM
+  for (const project of portfolioData) {
+    const markdownHTML = project.markdown
+      ? await loadMarkdown(project.markdown)
+      : "";
+
+    const itemHTML = `
+    <li class="project-item active" data-filter-item data-categories='${JSON.stringify(
+      project.categories
+    )}'>
+      <a href="#">
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+          </div>
+          <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
+        </figure>
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-category">${project.categories.join(" & ")}</p>
+        <div class="project-tags">
+          ${
+            project.tags
+              ?.map((tag) => `<span class="project-tag">${tag}</span>`)
+              .join("") || ""
+          }
+        </div>
+      </a>
+    </li>
+  `;
+
+    projectsHTML += itemHTML;
+  }
+
   if (filterList) filterList.innerHTML = filterHTML;
   if (selectList) selectList.innerHTML = selectHTML;
   if (projectList) projectList.innerHTML = projectsHTML;
 
-  // 重新綁定事件
   initializePortfolioEvents();
 }
 
@@ -185,7 +195,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 // Portfolio Modal Functions
-function openPortfolioModal(item) {
+async function openPortfolioModal(item) {
   const modal = document.getElementById("portfolioModal");
   const modalContent = modal.querySelector(".modal-content");
   const projectItem = item.closest(".project-item");
@@ -210,7 +220,6 @@ function openPortfolioModal(item) {
       ?.map((tag) => `<span class="modal-tag">${tag}</span>`)
       .join("") || "";
 
-  // 在標題後面插入標籤容器
   const modalTitle = modalContent.querySelector(".modal-title");
   const existingTags = modalContent.querySelector(".modal-tags");
   if (existingTags) {
@@ -221,42 +230,55 @@ function openPortfolioModal(item) {
     `<div class="modal-tags">${tagsHTML}</div>`
   );
 
+  // YouTube 處理
   const videoContainer = modalContent.querySelector(".video-container");
 
-  if (projectData.videoUrl) {
-    if (projectData.videoUrl.includes("youtube.com")) {
-      const videoId = projectData.videoUrl.split("v=")[1].split("&")[0];
+  if (projectData.videoUrl && projectData.videoUrl.includes("youtube.com")) {
+    const videoId = projectData.videoUrl.split("v=")[1].split("&")[0];
 
-      if (player) {
-        player.destroy();
-      }
-
-      // 更新的 YouTube 播放器配置
-      player = new YT.Player("player", {
-        playerVars: {
-          playsinline: 1,
-          autoplay: 0,
-          controls: 1,
-          rel: 0,
-          modestbranding: 1,
-          showinfo: 0,
-        },
-        videoId: videoId,
-        events: {
-          onReady: function (event) {
-            videoContainer.style.display = "block";
-          },
-          onStateChange: function (event) {
-            // 播放狀態改變時的處理
-          },
-        },
-      });
-
-      videoContainer.style.display = "block";
+    if (player) {
+      player.destroy();
     }
+
+    player = new YT.Player("player", {
+      playerVars: {
+        playsinline: 1,
+        autoplay: 0,
+        controls: 1,
+        rel: 0,
+        modestbranding: 1,
+        showinfo: 0,
+      },
+      videoId: videoId,
+      events: {
+        onReady: function (event) {
+          videoContainer.style.display = "block";
+        },
+      },
+    });
+
+    videoContainer.style.display = "block";
   } else {
     videoContainer.style.display = "none";
   }
+
+  // ✅ 載入 Markdown 並插入
+  const markdownContainer = modalContent.querySelector("#modalMarkdownContent");
+  if (projectData.markdown && markdownContainer) {
+    const html = await loadMarkdown(projectData.markdown);
+    markdownContainer.innerHTML = html;
+
+    // ✅ 語法高亮
+    if (window.hljs) hljs.highlightAll();
+
+    // ✅ 圖片點擊放大功能
+    markdownContainer.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", () => {
+        openImageModal(img.src);
+      });
+    });
+  }
+
 
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
@@ -341,34 +363,6 @@ function generateResumeHTML(data) {
       .join("");
   }
 
-  // Generate Skills HTML
-  // const skillsList = document.getElementById("skills-list");
-  // if (skillsList && data.skills) {
-  //   skillsList.innerHTML = Object.entries(data.skills)
-  //     .map(
-  //       ([category, skills]) => `
-  //     <li class="skills-group">
-  //       <h3 class="h4 article-title">${category}</h3>
-  //       <div class="skills-wrapper">
-  //         ${skills
-  //           .map(
-  //             (skill) => `
-  //           <div class="skills-item">
-  //             <div class="skills-icon" title="${skill.title}">
-  //               <img src="${skill.icon}" alt="${skill.title}" width="40">
-  //             </div>
-  //             <p class="skills-name">${skill.name}</p>
-  //           </div>
-  //         `
-  //           )
-  //           .join("")}
-  //       </div>
-  //     </li>
-  //   `
-  //     )
-  //     .join("");
-  // }
-
   // Generate Skills HTML (List version without icons)
   const skillsList = document.getElementById("skills-list");
   if (skillsList && data.skills) {
@@ -422,7 +416,32 @@ function generateWhatImDoingHTML(whatImDoingData) {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   loadPortfolioData();
   loadResumeData();
 });
+
+// ✅ 綁定 modal 關閉按鈕
+document
+  .getElementById("portfolioModalClose")
+  .addEventListener("click", closePortfolioModal);
+
+// ✅ 點擊黑色背景也能關閉 modal
+document.getElementById("portfolioModal").addEventListener("click", (e) => {
+  if (e.target.id === "portfolioModal") {
+    closePortfolioModal();
+  }
+});
+
+// ✅ 顯示放大圖片
+function openImageModal(src) {
+  const modal = document.getElementById("imageModal");
+  const img = document.getElementById("modalImage");
+  img.src = src;
+  modal.style.display = "block";
+}
+
+// ✅ 關閉放大圖片
+function closeImageModal() {
+  document.getElementById("imageModal").style.display = "none";
+}

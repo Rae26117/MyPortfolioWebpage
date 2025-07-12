@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-dark.min.css" />
   </head>
   <body>
     <main>
@@ -129,10 +130,20 @@
             <h2 class="h2 article-title">個人簡介</h2>
           </header>
 
-          <section class="about-text">
-            <p>I'm.....</p>
-            <p>My....</p>
-          </section>
+        <section class="about-text">
+          <p>您好，我是陳雅玟，畢業於國立臺北商業大學數位多媒體設計系，具備實作導向的學習背景與跨領域協作經驗，畢業後為了提升技術深度，我完成了緯育 TibaMe 的「資安與雲端架構工程師養成班」，目前專注於雲端應用開發與自動化部署技術的學習與實作。</p>
+
+          <p>在大學期間，我曾擔任 Python、2D/3D 遊戲設計等課程的教學助理，也參與多項專案與展覽，如《VR 羽球訓練系統》《電學小教室》等教育部與體育署專案，負責模型、動畫製作與教材內容撰寫，培養我良好的專案執行與跨部門溝通能力。</p>
+
+          <p>職訓期間，我實作了 AWS EC2、VPC、CloudWatch、App Runner、RDS 等雲端服務，並以 ShellScript 與 Dockerfile 自動化部署 FastAPI 應用，推送至 ECR 並透過 App Runner 快速上線。也練習架設 ELB 與 Nginx 負載平衡、撰寫 IAM 與 IAM Identity Center 權限政策，初步理解企業級帳號治理與身份管理。</p>
+
+          <p>在專題《星探》中，我串接 AWS Bedrock（Claude 模型）與 Dify Workflow，實作自然語言查詢 EC2 狀態、帳單與 CloudWatch Logs，模型可依語意自動呼叫 API 並回傳摘要結果，並整合 log 查詢與工具處理邏輯，建立了完整的 AI 維運助手雛形。</p>
+
+          <p>此外，我也曾於 VR 教學專案中實作語音合成模型，使用 GPT-SoVITS 進行語音資料預處理與訓練（含 f0、hubert、mel 特徵提取），具備 AI 模型應用的基礎實務經驗。也熟悉 VMware 雙層虛擬化與 Windows Server AD + DNS 設定，對企業 IT 架構有基本理解。</p>
+
+          <p>我期望未來能投入雲端工程或 AI 系統整合相關職位，持續強化部署、自動化與帳號管理能力，我相信自己的學習熱誠與實作經驗，能在團隊中穩定貢獻與持續成長。感謝您閱讀我的自傳，期待能有機會與貴團隊合作。</p>
+        </section>
+
 
           <section class="service">
             <h3 class="h3 service-title">證 照</h3>
@@ -229,15 +240,26 @@
                 <div class="video-container">
                   <div id="player"></div>
                 </div>
+                <div class="modal-markdown markdown-body" id="modalMarkdownContent"></div>
+                <!-- 關閉按鈕 -->
+                <button id="portfolioModalClose" class="modal-close-btn" aria-label="close modal">
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
               </div>
             </div>
           </div>
         </article>
       </div>
     </main>
-
+    <!-- 圖片點擊放大 Modal -->
+    <div id="imageModal">
+      <span onclick="closeImageModal()">&times;</span>
+      <img id="modalImage" src="" alt="Enlarged Image">
+    </div>
     <script src="main.js"></script>
-
+    <!-- Markdown 解析器 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
