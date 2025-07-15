@@ -40,10 +40,10 @@
     透過 location、rewrite、正則表達式等機制，Nginx 的設定非常靈活，能根據不同需求建立複雜的路由邏輯與流量控制規則。
     總結來說，Nginx 適合用於高效能、可擴展的現代 Web 架構，能提升應用的穩定性、速度與安全性，因此成為眾多企業與開發者的首選 Web 伺服器。
 - ## 安裝 Nginx (Ubuntu)
-    ```bash
-    sudo apt update
-    sudo apt install nginx
-    ```
+  ```bash
+  sudo apt update
+  sudo apt install nginx
+  ```
 - ## 啟用與檢查
 
   ```bash
@@ -60,8 +60,8 @@
   sudo systemctl reload nginx
   ```
 
-  - ![image.png](img/image_1752097839132_0.png)
-  - ![image.png](img/image_1752097714428_0.png)
+  - ![image.png](./img/image_1752097839132_0.png)
+  - ![image.png](./img/image_1752097714428_0.png)
 
 - ## 基本設定說明
 
@@ -206,8 +206,8 @@
     sudo systemctl reload nginx
     ```
   - 成功連接：
-    ![image.png](img/image_1752103140828_0.png)
-  - ![image.png](img/image_1752102868287_0.png)
+    ![image.png](./img/image_1752103140828_0.png)
+  - ![image.png](./img/image_1752102868287_0.png)
 
 - ## 部署 LNMP 架構的動態網站
 
@@ -301,7 +301,7 @@
       sudo nginx -t
       sudo systemctl reload nginx
       ```
-    - ![image.png](img/image_1752105515249_0.png)
+    - ![image.png](./img/image_1752105515249_0.png)
 
   - ### 動態 Web 原始碼下載、解壓與權限管理
     - 假設你要部署 WordPress：
@@ -313,10 +313,10 @@
       sudo chown -R www-data:www-data /var/www/lnmp-site
       ```
   - 進行 WordPresss 安裝：
-  - ![image.png](img/image_1752105714301_0.png)
-  - ![image.png](img/image_1752106666586_0.png)
-  - ![image.png](img/image_1752106721911_0.png)
-  - ![image.png](img/image_1752106755350_0.png)
-  - ![image.png](img/image_1752106263326_0.png)
-  - ![image.png](img/image_1752106865915_0.png)
-  - ![image.png](img/image_1752106916310_0.png)
+  - ![image.png](./img/image_1752105714301_0.png)
+  - ![image.png](./img/image_1752106666586_0.png)
+  - ![image.png](./img/image_1752106721911_0.png)
+  - ![image.png](./img/image_1752106755350_0.png)
+  - ![image.png](./img/image_1752106263326_0.png)
+  - ![image.png](./img/image_1752106865915_0.png)
+  - ![image.png](./img/image_1752106916310_0.png)

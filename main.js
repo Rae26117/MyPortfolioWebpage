@@ -164,7 +164,9 @@ function filterFunc(selectedValue) {
   const filterItems = document.querySelectorAll("[data-filter-item]");
 
   filterItems.forEach((item) => {
-    const categories = JSON.parse(item.dataset.categories);
+    const categories = JSON.parse(item.dataset.categories).map((cat) =>
+      cat.toLowerCase()
+    );
     if (selectedValue === "all") {
       item.classList.add("active");
     } else if (categories.includes(selectedValue)) {
