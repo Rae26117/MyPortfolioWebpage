@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "AI 維運助手",
-      "imageUrl": "img/AI_StarScout.png",
+      "imageUrl": "./img/AI_StarScout.png",
       "categories": ["AI", "AWS"],
       "tags": ["FastAPI","Dify", "AWS Bedrock","Claude","CloudWatch","AppRunner","WordPress","RDS"],
       "description": "AI 維運助手專案，整合自然語言與 AWS API 操作",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "title": "Linux Nginx 網頁部署",
-      "imageUrl": "img/Linux_Nginx_Deploy.png",
+      "imageUrl": "./img/Linux_Nginx_Deploy.png",
       "categories": ["Linux"],
       "tags": ["Linux","Nginx"],
       "description": "Linux_Nginx 部署靜態與動態網頁",
