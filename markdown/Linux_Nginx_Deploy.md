@@ -60,8 +60,8 @@
   sudo systemctl reload nginx
   ```
 
-  - ![image.png](../img/image_1752097839132_0.png)
-  - ![image.png](../img/image_1752097714428_0.png)
+  - ![image.png](img/image_1752097839132_0.png)
+  - ![image.png](img/image_1752097714428_0.png)
 
 - ## 基本設定說明
 
@@ -206,8 +206,8 @@
     sudo systemctl reload nginx
     ```
   - 成功連接：
-    ![image.png](../img/image_1752103140828_0.png)
-  - ![image.png](../img/image_1752102868287_0.png)
+    ![image.png](img/image_1752103140828_0.png)
+  - ![image.png](img/image_1752102868287_0.png)
 
 - ## 部署 LNMP 架構的動態網站
 
@@ -301,7 +301,7 @@
       sudo nginx -t
       sudo systemctl reload nginx
       ```
-    - ![image.png](../img/image_1752105515249_0.png)
+    - ![image.png](img/image_1752105515249_0.png)
 
   - ### 動態 Web 原始碼下載、解壓與權限管理
     - 假設你要部署 WordPress：
@@ -313,10 +313,10 @@
       sudo chown -R www-data:www-data /var/www/lnmp-site
       ```
   - 進行 WordPresss 安裝：
-  - ![image.png](../img/image_1752105714301_0.png)
-  - ![image.png](../img/image_1752106666586_0.png)
-  - ![image.png](../img/image_1752106721911_0.png)
-  - ![image.png](../img/image_1752106755350_0.png)
-  - ![image.png](../img/image_1752106263326_0.png)
-  - ![image.png](../img/image_1752106865915_0.png)
-  - ![image.png](../img/image_1752106916310_0.png)
+  - ![image.png](img/image_1752105714301_0.png)
+  - ![image.png](img/image_1752106666586_0.png)
+  - ![image.png](img/image_1752106721911_0.png)
+  - ![image.png](img/image_1752106755350_0.png)
+  - ![image.png](img/image_1752106263326_0.png)
+  - ![image.png](img/image_1752106865915_0.png)
+  - ![image.png](img/image_1752106916310_0.png)

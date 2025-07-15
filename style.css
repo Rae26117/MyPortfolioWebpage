@@ -1932,8 +1932,11 @@ article.active {
   font-family: "Fira Code", "Consolas", monospace;
 }
 
+
+
+
 /* ✅ 修正 Markdown code block 跑版問題 */
-/* ✅ 最終修正版 - 修復 code block 文字跑版問題 */
+
 .modal-markdown pre,
 .markdown-body pre {
   background: #1e1e1e;
@@ -1945,8 +1948,8 @@ article.active {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  white-space: pre;          /* ✅ 不自動換行，保留原格式 */
-  word-break: normal;        /* ✅ 不斷詞，不強制中斷 */
+  white-space: pre;
+  word-break: normal;
   box-sizing: border-box;
 }
 
@@ -1954,7 +1957,32 @@ article.active {
 .markdown-body pre code {
   background: transparent;
   color: inherit;
-  white-space: pre;          /* ✅ 保留縮排 */
+  white-space: pre;
+  word-wrap: normal;
+  display: block;
+}
+
+/* ✅ 最終穩定版 code block 樣式 */
+.modal-markdown pre,
+.markdown-body pre {
+  white-space: pre;
+  word-break: normal;
+  overflow-x: auto;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #dcdcdc;
+  font-family: "Fira Code", Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-markdown pre code,
+.markdown-body pre code {
+  background: transparent;
+  color: inherit;
+  white-space: pre;
   word-wrap: normal;
   display: block;
   overflow-x: auto;
