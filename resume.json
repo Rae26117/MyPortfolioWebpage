@@ -18,19 +18,49 @@
   ],
   "experience": [
     {
-      "title": "Creative director",
-      "period": "2015 - Present",
-      "description": "I can develop and oversee creative concepts for projects and campaigns managing a team of designers, writers, and other creative professionals."
+      "title": "AI 輔助維運助手《星探》",
+      "period": "",
+      "description": "串接 FastAPI、Bedrock 與 Dify Workflow，實作自然語言查詢 AWS 資源與 log 分析，並以 ShellScript、Dockerfile 自動部署至 App Runner。"
     },
     {
-      "title": "Art director",
-      "period": "2013 - 2015",
-      "description": "I create and develop visual concepts that align with the project's goals and objectives, supervising the design process and managing timelines and budgets for design projects."
+      "title": "EC2 + RDS 搭建 WordPress 網站",
+      "period": "",
+      "description": "透過 AWS EC2 架設 WordPress，並串接 RDS 作為資料庫，完成基本網站部署與資料連線設定。"
     },
     {
-      "title": "Web designer",
-      "period": "2010 - 2013",
-      "description": "I create logos, color schemes and typography for a brand's identity. Also I develop graphics for websites, social media and digital ads with applications that enhance user experience."
+      "title": "AWS ELB 與 Auto Scaling 架構實作",
+      "period": "",
+      "description": "在 AWS 上部署多台 EC2 網頁伺服器，設定 Security Group 與 Auto Scaling，透過 Elastic Load Balancer 建立負載平衡環境，實作高可用性架構。"
+    },
+    {
+      "title": "VMware 雙層虛擬化與 DNS 設定",
+      "period": "",
+      "description": "使用 VMware ESXi 搭配 vSphere 建置雙層虛擬化環境，部署 Windows Server 並設定 Active Directory 與正反向 DNS。"
+    },
+    {
+      "title": "Linux 環境下的 Nginx 負載平衡實作",
+      "period": "",
+      "description": "於本地端 Ubuntu 環境下，使用 Nginx 部署靜態與動態網頁，實作多台後端 Web Server 的負載平衡。"
+    },
+    {
+      "title": "Python 與遊戲開發課程教學助理",
+      "period": "",
+      "description": "擔任 Python、2D/3D 遊戲設計與遊戲企劃課程的教學助理，協助教學與學生問題排解。"
+    },
+    {
+      "title": "教育部與體育署 VR 教材專案",
+      "period": "",
+      "description": "參與多項 VR 教材製作，負責動畫製作、功能測試，並實驗使用 GPT-SoVITS 進行虛擬角色的聲音合成訓練。"
+    },
+    {
+      "title": "企業合作建模專案《造葆有限公司》",
+      "period": "",
+      "description": "協助工業機器進行建模、貼圖與渲染處理，支援企業產品的數位化展示。"
+    },
+    {
+      "title": "大河文藝季《青春行》互動展覽",
+      "period": "",
+      "description": "使用 Unity + Node.js + Firebase 製作互動展品，與團隊共同完成數位藝術作品開發與展示。"
     }
   ],
   "what_im_doing": [

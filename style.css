@@ -1883,12 +1883,12 @@ article.active {
 /* ✅ Portfolio Modal 內的 Markdown 縮排與圖片置中優化 */
 /* Markdown 區塊外框樣式：置中＋最大寬度限制 */
 #modalMarkdownContent {
-  margin: 0 auto;              /* 區塊整體置中 */
-  padding: 1rem;               /* 區塊內距 */
-  width: 90%;                  /* 響應式寬度 */
-  max-width: 960px;            /* 最大寬度 */
+  margin: 0 auto; /* 區塊整體置中 */
+  padding: 1rem; /* 區塊內距 */
+  width: 90%; /* 響應式寬度 */
+  max-width: 960px; /* 最大寬度 */
   box-sizing: border-box;
-  text-align: left;            /* 區塊內文字仍靠左 */
+  text-align: left; /* 區塊內文字仍靠左 */
 }
 
 /* 圖片置中顯示 */
@@ -1905,4 +1905,57 @@ article.active {
     width: 95%;
     padding: 1rem 0.5rem;
   }
+}
+
+/* Markdown code block 樣式優化 */
+.modal-markdown pre code {
+  display: block;
+  background-color: #161b22;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  tab-size: 2;
+  word-break: break-word;
+}
+
+.modal-markdown code {
+  background-color: #2d333b;
+  color: #e6edf3;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 90%;
+  font-family: "Fira Code", "Consolas", monospace;
+}
+
+/* ✅ 修正 Markdown code block 跑版問題 */
+/* ✅ 最終修正版 - 修復 code block 文字跑版問題 */
+.modal-markdown pre,
+.markdown-body pre {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: "Fira Code", Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  white-space: pre;          /* ✅ 不自動換行，保留原格式 */
+  word-break: normal;        /* ✅ 不斷詞，不強制中斷 */
+  box-sizing: border-box;
+}
+
+.modal-markdown pre code,
+.markdown-body pre code {
+  background: transparent;
+  color: inherit;
+  white-space: pre;          /* ✅ 保留縮排 */
+  word-wrap: normal;
+  display: block;
+  overflow-x: auto;
 }
