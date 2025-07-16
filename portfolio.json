@@ -77,9 +77,36 @@
       "title": "AI-Agent",
       "imageUrl": "./img/AI_Agent.png",
       "categories": ["AI"],
-      "tags": ["AI"],
+      "tags": ["AI","AI-Agent"],
       "description": "認識AI-Agent，了解其概念、架構與應用",
       "markdown": "./markdown/AI_Agent.md"
+    },
+    {
+      "id": 10,
+      "title": "Prompt",
+      "imageUrl": "./img/AI_Prompt.png",
+      "categories": ["AI"],
+      "tags": ["AI","Prompt"],
+      "description": "認識Prompt，了解其概念與應用",
+      "markdown": "./markdown/Prompt.md"
+    },
+    {
+      "id": 11,
+      "title": "向量資料庫",
+      "imageUrl": "./img/AI_Vector_Database.png",
+      "categories": ["AI"],
+      "tags": ["AI","向量資料庫"],
+      "description": "認識向量資料庫，了解其概念與應用",
+      "markdown": "./markdown/Vector_Database.md"
+    },
+    {
+      "id": 12,
+      "title": "TCP/IP 協定",
+      "imageUrl": "./img/TCP_IP.png",
+      "categories": ["網路概論"],
+      "tags": ["TCP/IP","網路概論"],
+      "description": "認識 TCP/IP 協定",
+      "markdown": "./markdown/TCP_IP.md"
     }
   ]
 }
