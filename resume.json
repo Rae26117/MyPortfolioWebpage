@@ -65,24 +65,59 @@
   ],
   "what_im_doing": [
     {
-      "title": "Web Design",
-      "icon": "https://i.postimg.cc/4389jZkP/icon-design.png",
-      "description": "The most modern and high-quality design made at a professional level."
+      "title": "網頁設計丙級",
+      "icon": "color-palette-outline",
+      "description": "具備基礎的 HTML、CSS 及網頁排版設計能力，能製作靜態網頁與多頁式網站。"
     },
     {
-      "title": "Web Development",
-      "icon": "https://i.postimg.cc/ZqgqrqzG/icon-dev.png",
-      "description": "High-quality development of sites at the professional level."
+      "title": "電腦軟體應用乙級",
+      "icon": "desktop-outline",
+      "description": "熟悉文書處理、試算表與簡報軟體，具備整合應用能力。"
     },
     {
-      "title": "Mobile Apps",
-      "icon": "https://i.postimg.cc/xjLdzYxZ/icon-app.png",
-      "description": "Professional development of applications for iOS and Android."
+      "title": "會計事務丙級（人工記帳與資訊）",
+      "icon": "document-text-outline",
+      "description": "了解會計基本原則，能進行手工與電腦會計系統記帳作業。"
     },
     {
-      "title": "Photography",
-      "icon": "https://i.postimg.cc/0NL8zHpx/icon-photo.png",
-      "description": "I make high-quality photos of any category at a professional level."
+      "title": "Autodesk Certified Professional: Maya",
+      "icon": "cube-outline",
+      "description": "具備專業級 3D 建模、動畫與渲染技能，精通 Maya 軟體。"
+    },
+    {
+      "title": "Autodesk Certified User: Maya",
+      "icon": "cube-outline",
+      "description": "掌握 Maya 的基本操作與動畫製作流程，能應用於創意製作中。"
+    },
+    {
+      "title": "Adobe Photoshop / Illustrator / InDesign",
+      "icon": "brush-outline",
+      "description": "熟悉 Adobe 設計三大軟體，具備平面設計、影像編修與排版能力。"
+    },
+    {
+      "title": "Unity Certified User: Programmer",
+      "icon": "game-controller-outline",
+      "description": "具備 Unity 程式設計基礎，能開發互動內容與遊戲邏輯。"
+    },
+    {
+      "title": "MOEA Certified",
+      "icon": "ribbon-outline",
+      "description": "通過經濟部認證課程，具備產業數位轉型所需的資訊技能。"
+    },
+    {
+      "title": "Mobile Application Planner - Associate",
+      "icon": "phone-portrait-outline",
+      "description": "掌握手機應用規劃流程，能進行 App 規格撰寫與功能設計規劃。"
+    },
+    {
+      "title": "ITE - 人工智慧應用",
+      "icon": "hardware-chip-outline",
+      "description": "具備基礎 AI 概念與實作能力，了解常見模型與應用場景。"
+    },
+    {
+      "title": "ITE - 巨量資料處理與分析",
+      "icon": "analytics-outline",
+      "description": "了解大數據處理流程，具備初步的資料分析與視覺化能力。"
     }
   ],
   "skills": {

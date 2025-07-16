@@ -402,7 +402,7 @@ function generateWhatImDoingHTML(whatImDoingData) {
         (item) => `
         <li class="service-item">
           <div class="service-icon-box">
-            <img src="${item.icon}" alt="${item.title}" width="40" />
+            <ion-icon name="${item.icon}" style="font-size: 32px; color: var(--blue-crayola);"></ion-icon>
           </div>
           <div class="service-content-box">
             <h4 class="h4 service-item-title">${item.title}</h4>

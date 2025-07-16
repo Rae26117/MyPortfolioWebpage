@@ -17,6 +17,69 @@
       "tags": ["Linux","Nginx"],
       "description": "Linux_Nginx 部署靜態與動態網頁",
       "markdown": "./markdown/Linux_Nginx_Deploy.md"
+    },
+    {
+      "id": 3,
+      "title": "Linux Nginx 負載平衡",
+      "imageUrl": "./img/Linux_Nginx_LB.png",
+      "categories": ["Linux"],
+      "tags": ["Linux","Nginx"],
+      "description": "Linux_Nginx 負載平衡實作",
+      "markdown": "./markdown/Linux_Nginx_LB.md"
+    },
+    {
+      "id": 4,
+      "title": "AWS VPC建置",
+      "imageUrl": "./img/AWS_VPC.png",
+      "categories": ["AWS"],
+      "tags": ["AWS","VPC"],
+      "description": "Linux_Nginx 負載平衡實作",
+      "markdown": "./markdown/AWS_VPC.md"
+    },
+    {
+      "id": 5,
+      "title": "EC2+RDS搭建WordPreess網站",
+      "imageUrl": "./img/AWS_EC2_RDS.png",
+      "categories": ["AWS"],
+      "tags": ["AWS","EC2","RDS","WordPress"],
+      "description": "使用 AWS EC2 + RDS 搭建 WordPreess 網站",
+      "markdown": "./markdown/AWS_EC2_RDS.md"
+    },
+    {
+      "id": 6,
+      "title": "網路芳鄰建立與使用",
+      "imageUrl": "./img/Linux_Windows_Samba.png",
+      "categories": ["Linux"],
+      "tags": ["Linux","Windows","Samba"],
+      "description": "使用 Samba 建立與使用網路芳鄰",
+      "markdown": "./markdown/Linux_Win_Samba.md"
+    },
+    {
+      "id": 7,
+      "title": "從過去到現在的通訊方式",
+      "imageUrl": "./img/Communication.png",
+      "categories": ["網路概論"],
+      "tags": ["網路概論"],
+      "description": "從過去到現在的通訊方式",
+      "markdown": "./markdown/Communications.md"
+    },
+    {
+      "id": 8,
+      "title": "AWS Organization & IAM Identity Center",
+      "imageUrl": "./img/AWS_OI.png",
+      "categories": ["AWS"],
+      "tags": ["AWS","Organization","IAM Identity Center"],
+      "description": "使用AWS Organization 與 IAM Identity Center建立共用專案環境",
+      "markdown": "./markdown/AWS_Organization_IAM_Identity_Center.md"
+    },
+    {
+      "id": 9,
+      "title": "AI-Agent",
+      "imageUrl": "./img/AI_Agent.png",
+      "categories": ["AI"],
+      "tags": ["AI"],
+      "description": "認識AI-Agent，了解其概念、架構與應用",
+      "markdown": "./markdown/AI_Agent.md"
     }
   ]
 }
