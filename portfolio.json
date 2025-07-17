@@ -107,6 +107,15 @@
       "tags": ["TCP/IP","網路概論"],
       "description": "認識 TCP/IP 協定",
       "markdown": "./markdown/TCP_IP.md"
+    },
+    {
+      "id": 13,
+      "title": "OSI 7 層模型",
+      "imageUrl": "./img/OSI.png",
+      "categories": ["網路概論"],
+      "tags": ["OSI","網路概論"],
+      "description": "認識 OSI 7 層模型",
+      "markdown": "./markdown/OSI.md"
     }
   ]
 }
